@@ -1,6 +1,6 @@
 <div class="box-body">
     <div class="form-group">
-        <div class="col-lg-12 col-lg-offset-1">
+        <div class="col-lg-10 col-lg-offset-1">
             <div class="alert alert-warning">
                 Note : You need to have 0777 permission to all folders of the project.
             </div>
@@ -10,7 +10,7 @@
     <div class="form-group">
         {{ Form::label('name', trans('generator::labels.modules.form.name'), ['class' => 'col-lg-2 control-label required']) }}
 
-        <div class="col-lg-12">
+        <div class="col-lg-10">
             {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog', 'required' => 'required']) }}
         </div><!--col-lg-10-->
     </div>
@@ -19,7 +19,7 @@
     <div class="form-group">
         {{ Form::label('directory_name', trans('generator::labels.modules.form.directory_name'), ['class' => 'col-lg-2 control-label required']) }}
 
-        <div class="col-lg-12">
+        <div class="col-lg-10">
             {{ Form::text('directory_name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog', 'required' => true]) }}
         </div><!--col-lg-10-->
     </div>
@@ -29,7 +29,7 @@
     <div class="form-group">
         {{ Form::label('model_name', trans('generator::labels.modules.form.model_name'), ['class' => 'col-lg-2 control-label required']) }}
 
-        <div class="col-lg-12">
+        <div class="col-lg-10">
             {{ Form::text('model_name', null, ['class' => 'form-control box-size only-text', 'placeholder' => 'e.g., Blog', 'required' => true]) }}
             <div class="model-messages"></div>
         </div>
@@ -40,7 +40,7 @@
     <div class="form-group">
         {{ Form::label('table_name', trans('generator::labels.modules.form.table_name'), ['class' => 'col-lg-2 control-label']) }}
 
-        <div class="col-lg-12">
+        <div class="col-lg-10">
             {{ Form::text('table_name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog']) }}
             <div class="table-messages"></div>
         </div><!--col-lg-10-->
@@ -50,27 +50,22 @@
     <!-- Crud Operations Create/Edit/Delete to be added to the field (Read operation is given by default)-->
     <div class="form-group">
         {{ Form::label('operations', 'CRUD Operations', ['class' => 'col-lg-2 control-label']) }}
-        <div class="col-lg-12">
-            <div class="row">
-            <div class="col-lg-1 checkbox checkbox-info mb-2">
-                    <input  id="checkbox1" type="checkbox"  id="model_create" name="model_create" value="1">
-                     <label for="checkbox1">
-                        Create
-                    </label>
-            </div> 
-            <div class="col-lg-1 checkbox checkbox-info mb-2">
-                    <input  id="checkbox2" type="checkbox"  id="model_edit" name="model_edit" value="1">
-                     <label for="checkbox2">
-                         Edit
-                    </label>
-            </div> 
-            <div class="col-lg-1 checkbox checkbox-info mb-2">
-                    <input  id="checkbox3" type="checkbox"  id="model_delete" name="model_delete" value="1">
-                     <label for="checkbox3">
-                        Delete
-                    </label>
-            </div> 
-            </div>          
+        <div class="col-lg-8">
+            <label class="control control--checkbox">
+                <!-- For Create Operation of CRUD -->
+                {{ Form::checkbox('model_create', '1', false) }}Create
+                <div class="control__indicator"></div>
+            </label>
+            <label class="control control--checkbox">
+                <!-- For Edit Operation of CRUD -->
+                {{ Form::checkbox('model_edit', '1', false) }}Edit
+                <div class="control__indicator"></div>
+            </label>
+            <label class="control control--checkbox">
+                <!-- For Delete Operation of CRUD -->
+                {{ Form::checkbox('model_delete', '1', false) }}Delete
+                <div class="control__indicator"></div>
+            </label>
         </div>
     </div>
     <!-- End Crud Operations -->
@@ -84,12 +79,11 @@
         <div class="form-group event clearfix">
             {{ Form::label('event[]', trans('generator::labels.modules.form.event'), ['class' => 'col-lg-2 control-label']) }}
 
-            <div class="col-lg-12 mb-2">
+            <div class="col-lg-6">
                 {{ Form::text('event[]', null, ['class' => 'form-control box-size', 'placeholder' => trans('generator::labels.modules.form.event'), 'style' => 'width:100%']) }}
             </div><!--col-lg-10-->
-            <a href="#" class="ml-2 btn btn-danger btn-md remove-field hidden">Remove Event</a>
-            <a href="#" class="ml-2 btn btn-blue btn-md add-field">Add Event</a>
-
+            <a href="#" class="btn btn-danger btn-md remove-field hidden">Remove Event</a>
+            <a href="#" class="btn btn-primary btn-md add-field">Add Event</a>
         </div><!--form control-->
     </div>
 
@@ -114,7 +108,7 @@
     <!-- Override CheckBox -->
     <div class="form-group">
         <div class="col-lg-2"></div>
-        <div class="col-lg-12">
+        <div class="col-lg-10">
             <p><strong>Note : </strong> The Files would be overwritten, if already exists. Please look at files (and their respective paths) carefully before creating.</p>
         </div><!--form control-->
     </div>
@@ -268,8 +262,8 @@
                 files = [];
                 model_plural = pluralize(model);
                 files.push(model_nspace + separator + model + ".php\n");
-                files.push(model_nspace + separator + "Traits" + directory_separator + model_plural + "Attribute.php\n");
-                files.push(model_nspace + separator + "Traits" + directory_separator + model_plural + "Relationship.php\n");
+                files.push(model_nspace + separator + "Traits" + directory_separator + model + "Attribute.php\n");
+                files.push(model_nspace + separator + "Traits" + directory_separator + model + "Relationship.php\n");
                 files.push("\n" + controller_nspace + separator +model_plural + "Controller.php\n");
                 files.push(controller_nspace + separator +model_plural + "TableController.php\n");
                 create = $("input[name=model_create]").prop('checked');
@@ -277,15 +271,15 @@
                 del = $("input[name=model_delete]").prop('checked');
                 files.push("\n");
                 if(create) {
-                    files.push(request_nspace + separator + "Create" + model_plural + "Request.php\n");
-                    files.push(request_nspace + separator + "Store" + model_plural + "Request.php\n");
+                    files.push(request_nspace + separator + "Create" + model + "Request.php\n");
+                    files.push(request_nspace + separator + "Store" + model + "Request.php\n");
                 }
                 if(edit) {
-                    files.push(request_nspace + separator + "Edit" + model_plural + "Request.php\n");
-                    files.push(request_nspace + separator + "Update" + model_plural + "Request.php\n");
+                    files.push(request_nspace + separator + "Edit" + model + "Request.php\n");
+                    files.push(request_nspace + separator + "Update" + model + "Request.php\n");
                 }
                 if(del) {
-                    files.push(request_nspace + separator + "Delete" + model_plural + "Request.php\n");
+                    files.push(request_nspace + separator + "Delete" + model + "Request.php\n");
                 }
                 files.push("\n" + views_path + separator + "index.blade.php\n");
                 if(create) {
@@ -300,7 +294,7 @@
                 files.push("\n");
                 files.push(route_path + model + ".php\n");
                 files.push("\n");
-                files.push(repo_nspace + separator + model_plural + "Repository.php\n");
+                files.push(repo_nspace + separator + model + "Repository.php\n");
                 files.push("\n");
                 $(document).find('input[name="event[]"]').each(function(){
                     if(e = $(this).val()) {
