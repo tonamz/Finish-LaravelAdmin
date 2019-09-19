@@ -289,17 +289,26 @@ function useFile(file_url) {
     tinyMCEPopup.close();
   }
 
-  function useTinymce4AndColorbox(url, field_name) {
-    console.log(url);
-    parent.document.getElementById(field_name).value = url;
-
-    if(typeof parent.tinyMCE !== "undefined") {
-      parent.tinyMCE.activeEditor.windowManager.close();
-    }
-    if(typeof parent.$.fn.colorbox !== "undefined") {
-      parent.$.fn.colorbox.close();
-    }
+  function useTinymce4AndColorbox(url) {
+    parent.postMessage({
+      mceAction: 'insert',
+      content: url
+    });
+    
+    parent.postMessage({ mceAction: 'close' });
   }
+
+  // function useTinymce4AndColorbox(url, field_name) {
+  //   console.log(url);
+  //   parent.document.getElementById(field_name).value = url;
+
+  //   if(typeof parent.tinyMCE !== "undefined") {
+  //     parent.tinyMCE.activeEditor.windowManager.close();
+  //   }
+  //   if(typeof parent.$.fn.colorbox !== "undefined") {
+  //     parent.$.fn.colorbox.close();
+  //   }
+  // }
 
   function useCkeditor3(url) {
     if (window.opener) {
@@ -325,11 +334,14 @@ function useFile(file_url) {
   var is_fcke = typeof data != 'undefined' && data['Properties']['Width'] != '';
   var file_path = url.replace(route_prefix, '');
 
-  if (window.opener || window.tinyMCEPopup || field_name || getUrlParam('CKEditorCleanUpFuncNum') || is_ckeditor) {
+  if ('tinymce5' === getUrlParam('editor')) {
+    useTinymce5(url);
+} else if (window.opener || window.tinyMCEPopup || field_name || getUrlParam('CKEditorCleanUpFuncNum') || is_ckeditor){
     if (window.tinyMCEPopup) { // use TinyMCE > 3.0 integration method
       useTinymce3(url);
     } else if (field_name) {   // tinymce 4 and colorbox
-      useTinymce4AndColorbox(url, field_name);
+      // useTinymce4AndColorbox(url, field_name);
+      useTinymce4AndColorbox(url);
     } else if(is_ckeditor) {   // use CKEditor 3.0 + integration method
       useCkeditor3(url);
     } else if (is_fcke) {      // use FCKEditor 2.0 integration method

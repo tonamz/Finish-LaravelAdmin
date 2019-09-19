@@ -121,6 +121,9 @@ return [
         'image/svg+xml',
         'application/pdf',
         'text/plain',
+        'image/vnd.microsoft.icon',
+        'image/x-icon',
+        'application/vnd.ms-excel','application/vnd.openxmlformats-officedocument.wordprocessingml.document','application/docx'
     ],
 
     /*

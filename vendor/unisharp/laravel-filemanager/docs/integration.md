@@ -38,7 +38,8 @@ Check `vendor/unisharp/laravel-filemanager/src/views/demo.blade.php`, which alre
 ### Option 2: TinyMCE4
 
 ```html
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 <textarea name="content" class="form-control my-editor">{!! old('content', $content) !!}</textarea>
 <script>
   var editor_config = {
