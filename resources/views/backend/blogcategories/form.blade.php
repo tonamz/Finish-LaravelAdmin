@@ -1,7 +1,7 @@
 
         {{ Form::label('name', trans('validation.attributes.backend.blogcategories.title'), ['class' => 'col-lg-2 control-label required']) }}
 
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.blogcategories.title'), 'required' => 'required']) }}
         </div><!--col-lg-10-->
     </div><!--form control-->

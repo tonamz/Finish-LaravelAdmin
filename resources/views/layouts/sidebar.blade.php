@@ -35,13 +35,14 @@
                         </li>
                     </ul>
                 </li>
-                @endauth
+       
                 <li>
                     <a href="{{ route('admin.modules.index') }}">
                         <i class="fe-edit-2 "></i>
                         <span> Module </span>
                     </a>
                 </li>
+                @endauth
                 <!-- <li>
                     <a href="{{ route('admin.menus.index') }}">
                         <i class="fe-menu "></i>

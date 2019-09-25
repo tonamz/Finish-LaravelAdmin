@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('generator::labels.modules.management') . ' | ' . trans('generator::labels.modules.edit'))
 
@@ -12,7 +12,7 @@
 @section('content')
     {{ Form::model($module, ['route' => ['admin.modules.update', $module], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-module', 'files' => true]) }}
 
-        <div class="box box-info">
+        <div class="card box box-info">
             <div class="box-header with-border">
                 <h3 class="box-title">{{ trans('generator::labels.modules.edit') }}</h3>
 

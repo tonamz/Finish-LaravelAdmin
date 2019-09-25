@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('generator::labels.modules.management') . ' | ' . trans('generator::labels.modules.create'))
 
@@ -12,7 +12,7 @@
 @section('content')
     {{ Form::open(['route' => 'admin.modules.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-module', 'files' => true]) }}
 
-        <div class="box box-info">
+        <div class="card box box-info">
             <div class="box-header with-border">
                 <h3 class="box-title">{{ trans('generator::labels.modules.create') }}</h3>
 

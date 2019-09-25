@@ -53,19 +53,25 @@
         <div class="col-lg-8">
             <label class="control control--checkbox">
                 <!-- For Create Operation of CRUD -->
-                {{ Form::checkbox('model_create', '1', false) }}Create
-                <div class="control__indicator"></div>
-            </label>
-            <label class="control control--checkbox">
-                <!-- For Edit Operation of CRUD -->
-                {{ Form::checkbox('model_edit', '1', false) }}Edit
-                <div class="control__indicator"></div>
-            </label>
-            <label class="control control--checkbox">
-                <!-- For Delete Operation of CRUD -->
-                {{ Form::checkbox('model_delete', '1', false) }}Delete
-                <div class="control__indicator"></div>
-            </label>
+                <div class="checkbox checkbox-info mb-2">
+                    <input   id="checkbox4" type="checkbox" name="model_create" value="1">
+                     <label for="checkbox4">
+                        Create
+                    </label>
+                </div> 
+                <div class="checkbox checkbox-info mb-2">
+                    <input   id="checkbox5" type="checkbox" name="model_edit" value="1">
+                     <label for="checkbox5">
+                        Edit
+                    </label>
+                </div> 
+                <div class="checkbox checkbox-info mb-2">
+                    <input  id="checkbox6" type="checkbox" name="model_delete" value="1">
+                     <label for="checkbox6">
+                        Delete
+                    </label>
+                </div> 
+  
         </div>
     </div>
     <!-- End Crud Operations -->
@@ -79,11 +85,12 @@
         <div class="form-group event clearfix">
             {{ Form::label('event[]', trans('generator::labels.modules.form.event'), ['class' => 'col-lg-2 control-label']) }}
 
-            <div class="col-lg-6">
+            
+            <div class="col-lg-12">
                 {{ Form::text('event[]', null, ['class' => 'form-control box-size', 'placeholder' => trans('generator::labels.modules.form.event'), 'style' => 'width:100%']) }}
             </div><!--col-lg-10-->
-            <a href="#" class="btn btn-danger btn-md remove-field hidden">Remove Event</a>
-            <a href="#" class="btn btn-primary btn-md add-field">Add Event</a>
+            <a href="#" class="ml-2 mt-2 btn btn-danger btn-md remove-field hidden">Remove Event</a>
+            <a href="#" class="ml-2 mt-2 btn btn-blue btn-md add-field">Add Event</a>
         </div><!--form control-->
     </div>
 

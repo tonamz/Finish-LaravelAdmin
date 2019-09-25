@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.modules.management'))
 
@@ -7,18 +7,18 @@
 @endsection
 
 @section('content')
-    <div class="box box-info">
+    <div class="card box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.modules.management') }}</h3>
 
-            <div class="box-tools pull-right">
+            <div class="box-tools pull-right ml-3">
                 @include('generator::partials.modules-header-buttons')
             </div>
         </div><!-- /.box-header -->
 
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
-                <table id="modules-table" class="table table-condensed table-hover table-bordered">
+                <table id="modules-table" class="w-100 table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.modules.table.name') }}</th>
