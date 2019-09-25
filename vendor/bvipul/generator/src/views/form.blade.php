@@ -1,6 +1,6 @@
 <div class="box-body">
     <div class="form-group">
-        <div class="col-lg-10 col-lg-offset-1">
+        <div class="col-lg-12 col-lg-offset-1">
             <div class="alert alert-warning">
                 Note : You need to have 0777 permission to all folders of the project.
             </div>
@@ -10,7 +10,7 @@
     <div class="form-group">
         {{ Form::label('name', trans('generator::labels.modules.form.name'), ['class' => 'col-lg-2 control-label required']) }}
 
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog', 'required' => 'required']) }}
         </div><!--col-lg-10-->
     </div>
@@ -19,7 +19,7 @@
     <div class="form-group">
         {{ Form::label('directory_name', trans('generator::labels.modules.form.directory_name'), ['class' => 'col-lg-2 control-label required']) }}
 
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             {{ Form::text('directory_name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog', 'required' => true]) }}
         </div><!--col-lg-10-->
     </div>
@@ -29,7 +29,7 @@
     <div class="form-group">
         {{ Form::label('model_name', trans('generator::labels.modules.form.model_name'), ['class' => 'col-lg-2 control-label required']) }}
 
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             {{ Form::text('model_name', null, ['class' => 'form-control box-size only-text', 'placeholder' => 'e.g., Blog', 'required' => true]) }}
             <div class="model-messages"></div>
         </div>
@@ -40,7 +40,7 @@
     <div class="form-group">
         {{ Form::label('table_name', trans('generator::labels.modules.form.table_name'), ['class' => 'col-lg-2 control-label']) }}
 
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             {{ Form::text('table_name', null, ['class' => 'form-control box-size', 'placeholder' => 'e.g., Blog']) }}
             <div class="table-messages"></div>
         </div><!--col-lg-10-->
@@ -50,7 +50,7 @@
     <!-- Crud Operations Create/Edit/Delete to be added to the field (Read operation is given by default)-->
     <div class="form-group">
         {{ Form::label('operations', 'CRUD Operations', ['class' => 'col-lg-2 control-label']) }}
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <label class="control control--checkbox">
                 <!-- For Create Operation of CRUD -->
                 <div class="checkbox checkbox-info mb-2">
@@ -103,7 +103,7 @@
         <!--All Files -->
         <div class="form-group">
             <label class="col-lg-2 control-label">Files To Be Generated</label>
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <textarea class="form-control box-size files" contenteditable="true" rows=15 readonly="">
                 </textarea>
             </div>
