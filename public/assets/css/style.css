@@ -1,19 +1,22 @@
 h1, .h1 {
   font-size: 1.8rem !important;
 }
+.navbar-custom{
+  background-color: black;
+}
 .bg-custom{
-    background-color: #96dcea;
-    border-color:  #96dcea;
+    background-color: black;
+    border-color:  black;
 }
 .bg-custom-dark{
-    background-color: #63bbcc;
-    border-color:   #63bbcc;
+    background-color: gray;
+    border-color:   gray;
     
 }
 .bg-custom-dark:hover{
-    background-color: #96dcea;
-    border-color:  #96dcea;
-    color: #63bbcc;
+    background-color: black;
+    border-color:  black;
+    color: black;
 }
 a{
     color: #63bbcc;
