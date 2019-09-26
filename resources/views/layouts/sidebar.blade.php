@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                 </li>
-                
+       
                 <li>
                     <a href="{{ route('admin.modules.index') }}">
                         <i class="fe-edit-2 "></i>
@@ -43,35 +43,6 @@
                     </a>
                 </li>
                 @endauth
-
-                <li>
-                    <a href="javascript: void(0);">
-                        <i class="fe-bookmark "></i>
-                        <span>Banner</span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="nav-second-level" aria-expanded="false">
-                        <li>
-                            <a href="{{ route('admin.banners.index') }}">List</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/admin/banners/2/edit') }}">About Us</a>
-                        </li>
-                        <li>
-                            <a href="{{  url('admin/banners/3/edit')}}">Award</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/admin/banners/4/edit') }}">Activity</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('admin/banners/5/edit') }}">Winner</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('admin/banners/6/edit') }}">Archive</a>
-                        </li>
-                    </ul>
-                </li>
-
                 <!-- <li>
                     <a href="{{ route('admin.menus.index') }}">
                         <i class="fe-menu "></i>

@@ -29,7 +29,4 @@ return [
 	"sweets" => [
 	"table" => "sweets",
 	],
-	"banners" => [
-	"table" => "banners",
-	],
 ];
