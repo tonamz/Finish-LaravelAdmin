@@ -266,6 +266,16 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"banners" => [
+	"create" => "Create Banner",
+	"edit" => "Edit Banner",
+	"management" => "Banner Management",
+	"title" => "Banners",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

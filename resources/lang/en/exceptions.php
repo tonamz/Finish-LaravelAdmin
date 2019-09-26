@@ -99,6 +99,13 @@ return [
 	"not_found" => "That Sweet does not exist.",
 	"update_error" => "There was a problem updating this Sweet. Please try again.",
 	],
+	"banners" => [
+	"already_exists" => "That Banner already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Banner. Please try again.",
+	"delete_error" => "There was a problem deleting this Banner. Please try again.",
+	"not_found" => "That Banner does not exist.",
+	"update_error" => "There was a problem updating this Banner. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

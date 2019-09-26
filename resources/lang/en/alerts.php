@@ -69,5 +69,10 @@ return [
 	"deleted" => "The Sweet was successfully deleted.",
 	"updated" => "The Sweet was successfully updated.",
 	],
+	"banners" => [
+	"created" => "The Banner was successfully created.",
+	"deleted" => "The Banner was successfully deleted.",
+	"updated" => "The Banner was successfully updated.",
+	],
 	],
 ];

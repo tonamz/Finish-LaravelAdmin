@@ -129,6 +129,13 @@ return [
 	"management" => "Sweet Management",
 	"main" => "Sweets",
 	],
+	"banners" => [
+	"all" => "All Banners",
+	"create" => "Create Banner",
+	"edit" => "Edit Banner",
+	"management" => "Banner Management",
+	"main" => "Banners",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",
