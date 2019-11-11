@@ -1,0 +1,21 @@
+<div class="box-body">
+    <div class="form-group">
+        <label for="content" class="control-label required">Banner name</label> 
+        @if(!empty($banners))
+        <input class="form-control" placeholder="Banner name" name="banner_name" type="text" id="banner_name" value="{{ $banners->banner_name}}">
+        @else   
+        <input class="form-control" placeholder="Banner name" name="banner_name" type="text" id="banner_name" >
+        @endif
+    </div><!--form group-->
+</div><!--box-body-->
+
+@section("after-scripts")
+    <script type="text/javascript">
+        //Put your javascript needs in here.
+        //Don't forget to put `@`parent exactly after `@`section("after-scripts"),
+        //if your create or edit blade contains javascript of its own
+        $( document ).ready( function() {
+            //Everything in here would execute after the DOM is ready to manipulated.
+        });
+    </script>
+@endsection
